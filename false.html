@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="badstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Les requins</title>
+
+</head>
+
+<body>
+
+
+<div class="bad">
+<h1>C'est la mauvaise réponse !!!</h1>
+
+
+</div>
+
+<div class="button_bad">
+<a href="index.html"><button>Retour à l'accueil</button></a>
+</div>
+
+<script>
+    function createConfetti() {
+      const confettiCount = 400;
+      const colors = ['#FF0000'];
+      
+      for(let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.textContent = '+';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.fontSize = (30 + Math.random() * 30) + 'px';
+        confetti.style.animationDelay = (Math.random() * 5) + 's';
+        confetti.style.opacity = 0.8 + Math.random() * 0.2;
+        document.body.appendChild(confetti);
+  
+        confetti.addEventListener('animationend', () => {
+          confetti.remove();
+        });
+      }
+    }
+  
+    window.onload = () => {
+      createConfetti();
+    };
+  </script>
+
+</body>
+</html>
