@@ -9,7 +9,7 @@
   }
   
   body {
-    background: url('images/background.gif');
+    background: url('background.gif');
     font-family: 'Quicksand', sans-serif;
     color: var(--white);
     overflow-x: hidden;
@@ -200,4 +200,5 @@
     right: 20px;
   }
   
+
 
